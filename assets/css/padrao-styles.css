@@ -1,24 +1,24 @@
 :root {
-    --container-bg: #4A4947;
-    --sombra: #D8D2C2;
-    --texto: #FAF7F0;
-    --input: #776B5D;
-    --btn-hover: #E8BCB9;
-    --border-input: #B17457;
-    --border-input-focus: #D8D2C2;
-    --btn-task: #B17457;
-    --btn-task-hover: #4A4947;
-    --task-bg: #776B5D;
-    --task-bg-hover: #4A4947;
-    --sombra-task-hover: #B17457;
-    --btn-apagar: #B17457;
-    --btn-apagar-hover: #493628;
+    --container-bg: #222831;
+    --sombra: #EEEEEE;
+    --texto: #EEEEEE;
+    --input: #393E46;
+    --btn-hover: #00ADB5;
+    --border-input: #EEEEEE;
+    --border-input-focus: #00ADB5;
+    --btn-task: #393E46;
+    --btn-task-hover: #00ADB5;
+    --task-bg: #393E46;
+    --task-bg-hover: #222831;
+    --sombra-task-hover: #00ADB5;
+    --btn-apagar: #222831;
+    --btn-apagar-hover: #393E46;
 } 
 
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('../img/main-bg.svg');
+    background-image: url('../img/main-bg-padrao.svg');
     color: var(--texto);
     margin: 0;
     padding: 0;
