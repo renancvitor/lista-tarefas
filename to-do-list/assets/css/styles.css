@@ -1,8 +1,25 @@
-/* Estilo geral */
+:root {
+    --container-bg: #4A4947;
+    --sombra: #D8D2C2;
+    --texto: #FAF7F0;
+    --input: #776B5D;
+    --btn-hover: #E8BCB9;
+    --border-input: #B17457;
+    --border-input-focus: #D8D2C2;
+    --btn-task: #B17457;
+    --btn-task-hover: #4A4947;
+    --task-bg: #776B5D;
+    --task-bg-hover: #4A4947;
+    --sombra-task-hover: #B17457;
+    --btn-apagar: #B17457;
+    --btn-apagar-hover: #493628;
+} 
+
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: radial-gradient(circle, rgb(20, 20, 50) 0%, rgb(10, 10, 20) 100%);
-    color: rgb(200, 200, 200);
+    background-image: url('../img/main-bg.svg');
+    color: var(--texto);
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,51 +28,50 @@ body {
     height: 100vh;
 }
 
-.container {
-    background: rgba(40, 40, 60, 0.9);
+.main-pg {
+    background-color: var(--container-bg);
     padding: 20px 30px;
     border-radius: 8px;
-    box-shadow: 0px 0px 20px 3px rgba(0, 200, 255, 0.5);
+    box-shadow: var(--sombra);
     width: 100%;
     max-width: 400px;
 }
 
 h1 {
-    color: rgb(0, 200, 255);
+    color: var(--texto);
     text-align: center;
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-/* Entrada e botão */
 .input-task {
     width: calc(100% - 10px);
     padding: 10px;
-    border: 1px solid rgb(0, 200, 255);
+    border: 1px solid var(--border-input);
     border-radius: 4px;
-    background: rgba(20, 20, 40, 0.8);
-    color: rgb(200, 200, 200);
+    background: var(--input);
+    color: var(--texto);
     outline: none;
     transition: border-color 0.3s;
 }
 
 .input-task:focus {
-    border-color: rgb(0, 255, 150);
+    border-color: var(--border-input-focus);
 }
 
 .btn-task {
     padding: 3px 8px;
-    background: rgb(0, 200, 255);
+    background: var(--btn-task);
     border: none;
     border-radius: 4px;
-    color: rgb(20, 20, 50);
+    color: var(--texto);
     cursor: pointer;
     font-weight: bold;
     transition: background 0.3s, transform 0.2s;
 }
 
 .btn-task:hover {
-    background: rgb(0, 255, 150);
+    background: var(--btn-task-hover);
     transform: scale(1.05);
 }
 
@@ -63,7 +79,6 @@ h1 {
     transform: scale(0.95);
 }
 
-/* Lista de tarefas */
 .tasks {
     list-style: none;
     margin: 20px 0 0;
@@ -71,28 +86,27 @@ h1 {
 }
 
 .tasks li {
-    background: rgba(20, 20, 40, 0.8);
+    background: var(--task-bg);
     margin: 8px 0;
     padding: 10px;
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: rgb(200, 200, 200);
-    box-shadow: 0px 0px 10px 2px rgba(0, 200, 255, 0.2);
+    color: var(--texto);
+    box-shadow: 0px 0px 10px 2px var(--sombra);
 }
 
 .tasks li:hover {
-    background: rgba(30, 30, 60, 0.9);
-    box-shadow: 0px 0px 15px 3px rgba(0, 255, 150, 0.4);
+    background: var(--task-bg-hover);
+    box-shadow: 0px 0px 15px 3px var(--sombra-task-hover);
 }
 
-/* Botão de apagar */
 .apagar {
-    background: rgba(255, 50, 50, 0.8);
+    background: var(--btn-apagar);
     border: none;
     padding: 5px 10px;
-    color: white;
+    color: var(--texto);
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
@@ -100,7 +114,7 @@ h1 {
 }
 
 .apagar:hover {
-    background: rgba(255, 80, 80, 1);
+    background: var(--btn-apagar-hover);
     transform: scale(1.1);
 }
 
@@ -108,7 +122,6 @@ h1 {
     transform: scale(0.9);
 }
 
-/* Responsividade */
 @media (max-width: 480px) {
     .input-task {
         width: 100%;
