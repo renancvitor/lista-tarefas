@@ -1,0 +1,207 @@
+:root {
+    --container-bg: #CEAB93;
+    --sombra: #E3CAA5;
+    --texto: #FFFBE9;
+    --input: #AD8B73;
+    --texto-input: #FFFBE9;
+    --btn-hover: #E8BCB9;
+    --border-input: #FFFBE9;
+    --border-input-focus: #E3CAA5;
+    --btn-task: #AD8B73;
+    --btn-task-hover: #CEAB93;
+    --task-bg: #AD8B73;
+    --task-bg-hover: #CEAB93;
+    --sombra-task-hover: #E3CAA5;
+    --btn-apagar: #AD8B73;
+    --btn-apagar-hover: #AD8B73;
+    --select-hover: #CEAB93;
+    --select-border: #FFFBE9;
+    --select: #AD8B73;
+    --scroll-track-bg: #CEAB93;
+    --scroll-thunb-bg: #AD8B73;
+    --scroll-border: #FFFBE9;
+} 
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('../img/main-bg-claro.svg');
+    color: var(--texto);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+h1, h2, li, p, option {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-pg {
+    background-color: var(--container-bg);
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+    width: 100%;
+    max-width: 400px;
+    max-height: 100vh;
+    overflow-y: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+select {
+    display: block;
+    width: 22%;
+    max-width: 360px;
+    margin: 10px auto;
+    background: var(--select);
+    color: var(--texto);
+    border: 1px solid var(--select-border);
+    border-radius: 4px;
+    padding: 3px 0px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+select:hover {
+    background: var(--select-hover);
+}
+
+h2 {
+    color: var(--texto);
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+h1 {
+    color: var(--texto);
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.input-task {
+    width: calc(100% - 10px);
+    padding: 10px;
+    border: 1px solid var(--border-input);
+    border-radius: 4px;
+    background: var(--input);
+    color: var(--texto);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-task:focus {
+    border-color: var(--border-input-focus);
+}
+
+.btn-task {
+    padding: 8px 8px;
+    background: var(--btn-task);
+    border: none;
+    border-radius: 4px;
+    color: var(--texto);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    margin: 0 auto;
+    display: block;
+    margin-top: 5px;
+}
+
+.btn-task:hover {
+    background: var(--btn-task-hover);
+    transform: scale(1.05);
+}
+
+.btn-task:active {
+    transform: scale(0.95);
+}
+
+.tasks {
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.tasks li {
+    background: var(--task-bg);
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--texto);
+    box-shadow: 0px 0px 10px 2px var(--sombra);
+}
+
+.tasks li:hover {
+    background: var(--task-bg-hover);
+    box-shadow: 0px 0px 15px 3px var(--sombra-task-hover);
+}
+
+.apagar {
+    background: var(--btn-apagar);
+    border: none;
+    padding: 5px 10px;
+    color: var(--texto);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.apagar:hover {
+    background: var(--btn-apagar-hover);
+    transform: scale(1.1);
+}
+
+.apagar:active {
+    transform: scale(0.9);
+}
+
+@media (max-width: 480px) {
+    .input-task {
+        width: 94%;
+        margin-bottom: 10px;
+    }
+
+    .btn-task {
+        width: 50%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .main-pg {
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        padding: 20px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    body {
+        margin: 0 20px;
+        padding: 0;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--btn-task);
+    border-radius: 10px;
+    border: 2px solid var(--select-border);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--container-bg);
+    border-radius: 10px;
+}
