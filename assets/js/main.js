@@ -77,11 +77,17 @@ addSavedTasks();
 const seletor = document.getElementById('seletor-tema');
 const temaEstilo = document.getElementById('tema-estilo');
 
-if (localStorage.getItem('temaSelecionado')) {
-    temaEstilo.href = localStorage.getItem('temaSelecionado');
-    seletor.value = localStorage.getItem('temaSelecionado');
+const temaSelecionado = localStorage.getItem('temaSelecionado');
+if (temaSelecionado) {
+    temaEstilo.href = temaSelecionado;
+    seletor.value = temaSelecionado;
+} else {
+    // Se não houver tema selecionado, defina um tema padrão
+    temaEstilo.href = "./css/padrao-style.css"; // Altere para o caminho do tema padrão
+    seletor.value = "./css/padrao-style.css"; // Altere para o caminho do tema padrão
 }
 
+// Atualiza o tema quando o usuário muda a seleção
 seletor.addEventListener('change', function () {
     temaEstilo.href = this.value;
     localStorage.setItem('temaSelecionado', this.value);
