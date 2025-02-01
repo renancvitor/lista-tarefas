@@ -16,11 +16,13 @@
     --select-hover: #6A1E55;
     --select-border: #A64D79;
     --select: #1A1A1D;
+    --scroll-track-bg: #1A1A1D;
+    --scroll-thunb-bg: #3B1C32;
+    --scroll-border: #A64D79;
 } 
 
-
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-image: url('../img/main-bg-escuro.svg');
     color: var(--texto);
     margin: 0;
@@ -29,6 +31,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
+}
+
+h1, h2, li, p, option {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .main-pg {
@@ -38,18 +45,28 @@ body {
     box-shadow: var(--sombra);
     width: 100%;
     max-width: 400px;
+    max-height: 100vh;
+    overflow-y: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 select {
-    transform: translate(250%, 10%);
-    background: var(--btn-apagar);
+    display: block;
+    width: 22%;
+    max-width: 360px;
+    margin: 10px auto;
+    background: var(--select);
     color: var(--texto);
-    border: 1px solid var(--border-input);
+    border: 1px solid var(--select-border);
+    border-radius: 4px;
+    padding: 3px 0px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 select:hover {
-    transform: translate(250%, 10%) scale(1.1);
-    background: var(--task-bg-hover);
+    background: var(--select-hover);
 }
 
 h2 {
@@ -82,7 +99,7 @@ h1 {
 }
 
 .btn-task {
-    padding: 3px 8px;
+    padding: 8px 8px;
     background: var(--btn-task);
     border: none;
     border-radius: 4px;
@@ -90,6 +107,9 @@ h1 {
     cursor: pointer;
     font-weight: bold;
     transition: background 0.3s, transform 0.2s;
+    margin: 0 auto;
+    display: block;
+    margin-top: 5px;
 }
 
 .btn-task:hover {
@@ -126,8 +146,7 @@ h1 {
 
 .apagar {
     background: var(--btn-apagar);
-    border: 1px solid var(--border-input);
-    border-radius: 4px;
+    border: none;
     padding: 5px 10px;
     color: var(--texto);
     border-radius: 4px;
@@ -147,11 +166,41 @@ h1 {
 
 @media (max-width: 480px) {
     .input-task {
-        width: 100%;
+        width: 94%;
         margin-bottom: 10px;
     }
 
     .btn-task {
-        width: 100%;
+        width: 50%;
+        margin: 0 auto;
+        display: block;
     }
+
+    .main-pg {
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        padding: 20px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    body {
+        margin: 0 20px;
+        padding: 0;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--btn-task);
+    border-radius: 10px;
+    border: 2px solid var(--select-border);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--container-bg);
+    border-radius: 10px;
 }

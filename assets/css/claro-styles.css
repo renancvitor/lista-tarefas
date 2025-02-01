@@ -17,10 +17,13 @@
     --select-hover: #CEAB93;
     --select-border: #FFFBE9;
     --select: #AD8B73;
+    --scroll-track-bg: #CEAB93;
+    --scroll-thunb-bg: #AD8B73;
+    --scroll-border: #FFFBE9;
 } 
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-image: url('../img/main-bg-claro.svg');
     color: var(--texto);
     margin: 0;
@@ -29,6 +32,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
+}
+
+h1, h2, li, p, option {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .main-pg {
@@ -38,24 +46,27 @@ body {
     box-shadow: var(--sombra);
     width: 100%;
     max-width: 400px;
-}
-
-h1 {
-    color: var(--texto);
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 10px;
+    max-height: 100vh;
+    overflow-y: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 select {
-    transform: translate(250%, 10%);
+    display: block;
+    width: 22%;
+    max-width: 360px;
+    margin: 10px auto;
     background: var(--select);
     color: var(--texto);
     border: 1px solid var(--select-border);
+    border-radius: 4px;
+    padding: 3px 0px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 select:hover {
-    transform: translate(250%, 10%) scale(1.1);
     background: var(--select-hover);
 }
 
@@ -64,6 +75,13 @@ h2 {
     text-align: center;
     font-size: 18px;
     margin-bottom: 8px;
+}
+
+h1 {
+    color: var(--texto);
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .input-task {
@@ -82,7 +100,7 @@ h2 {
 }
 
 .btn-task {
-    padding: 3px 8px;
+    padding: 8px 8px;
     background: var(--btn-task);
     border: none;
     border-radius: 4px;
@@ -90,6 +108,9 @@ h2 {
     cursor: pointer;
     font-weight: bold;
     transition: background 0.3s, transform 0.2s;
+    margin: 0 auto;
+    display: block;
+    margin-top: 5px;
 }
 
 .btn-task:hover {
@@ -126,8 +147,7 @@ h2 {
 
 .apagar {
     background: var(--btn-apagar);
-    border: 1px solid var(--border-input);
-    border-radius: 4px;
+    border: none;
     padding: 5px 10px;
     color: var(--texto);
     border-radius: 4px;
@@ -145,13 +165,43 @@ h2 {
     transform: scale(0.9);
 }
 
-@media (max-width: 880px) {
+@media (max-width: 480px) {
     .input-task {
-        width: 100%;
+        width: 94%;
         margin-bottom: 10px;
     }
 
     .btn-task {
-        width: 100%;
+        width: 50%;
+        margin: 0 auto;
+        display: block;
     }
+
+    .main-pg {
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        padding: 20px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    body {
+        margin: 0 20px;
+        padding: 0;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--btn-task);
+    border-radius: 10px;
+    border: 2px solid var(--select-border);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--container-bg);
+    border-radius: 10px;
 }
