@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const seletor = document.getElementById('seletor-tema');
 const temaEstilo = document.getElementById('tema-estilo');
 
@@ -27,8 +26,6 @@ seletor.addEventListener('change', function () {
     localStorage.setItem('temaSelecionado', novoTema); // Armazena o novo tema no localStorage
 });
 
-=======
->>>>>>> 1b88e1147bf3e75c32e9a4ac0522fbd22346dff3
 const inputTask = document.querySelector('.input-task');
 const btnTask = document.querySelector('.btn-task');
 const tasks = document.querySelector('.tasks');
