@@ -13,6 +13,9 @@
     --sombra-task-hover: #00ADB5;
     --btn-apagar: #222831;
     --btn-apagar-hover: #393E46;
+    --select-hover: #222831;
+    --select-border: #EEEEEE;
+    --select: #222831;
 } 
 
 
@@ -35,6 +38,25 @@ body {
     box-shadow: var(--sombra);
     width: 100%;
     max-width: 400px;
+}
+
+select {
+    transform: translate(250%, 10%);
+    background: var(--btn-apagar);
+    color: var(--texto);
+    border: 1px solid var(--border-input);
+}
+
+select:hover {
+    transform: translate(250%, 10%) scale(1.1);
+    background: var(--task-bg-hover);
+}
+
+h2 {
+    color: var(--texto);
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 8px;
 }
 
 h1 {

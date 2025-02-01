@@ -73,3 +73,16 @@ function addSavedTasks() {
     }
 }
 addSavedTasks();
+
+const seletor = document.getElementById('seletor-tema');
+const temaEstilo = document.getElementById('tema-estilo');
+
+if (localStorage.getItem('temaSelecionado')) {
+    temaEstilo.href = localStorage.getItem('temaSelecionado');
+    seletor.value = localStorage.getItem('temaSelecionado');
+}
+
+seletor.addEventListener('change', function () {
+    temaEstilo.href = this.value;
+    localStorage.setItem('temaSelecionado', this.value);
+});
