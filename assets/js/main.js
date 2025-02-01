@@ -1,20 +1,29 @@
 const seletor = document.getElementById('seletor-tema');
 const temaEstilo = document.getElementById('tema-estilo');
 
-const temaSelecionado = localStorage.getItem('temaSelecionado');
-if (temaSelecionado) {
-    temaEstilo.href = temaSelecionado;
-    seletor.value = temaSelecionado;
-} else {
-    // Se não houver tema selecionado, defina um tema padrão
-    temaEstilo.href = "./css/padrao-style.css"; // Altere para o caminho do tema padrão
-    seletor.value = "./css/padrao-style.css"; // Altere para o caminho do tema padrão
+// Função para definir o tema inicial com base no localStorage ou tema padrão
+function definirTema() {
+    const temaSelecionado = localStorage.getItem('temaSelecionado');
+    
+    // Se houver um tema armazenado no localStorage, aplique esse tema
+    if (temaSelecionado) {
+        temaEstilo.href = temaSelecionado;
+        seletor.value = temaSelecionado;
+    } else {
+        // Caso contrário, defina o tema padrão
+        temaEstilo.href = "./css/padrao-style.css"; // Caminho do tema padrão
+        seletor.value = "./css/padrao-style.css"; // Caminho do tema padrão
+    }
 }
+
+// Chama a função para garantir que o tema seja carregado na página
+definirTema();
 
 // Atualiza o tema quando o usuário muda a seleção
 seletor.addEventListener('change', function () {
-    temaEstilo.href = this.value;
-    localStorage.setItem('temaSelecionado', this.value);
+    const novoTema = this.value;
+    temaEstilo.href = novoTema;
+    localStorage.setItem('temaSelecionado', novoTema); // Armazena o novo tema no localStorage
 });
 
 const inputTask = document.querySelector('.input-task');
