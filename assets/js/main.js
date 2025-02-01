@@ -4,17 +4,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Função para definir o tema inicial com base no localStorage ou tema padrão
     function definirTema() {
-        const temaSelecionado = localStorage.getItem('temaSelecionado');
-        
-        // Se houver um tema armazenado no localStorage, aplique esse tema
-        if (temaSelecionado) {
-            temaEstilo.href = temaSelecionado;
-            seletor.value = temaSelecionado;
-        } else {
-            // Caso contrário, defina o tema padrão
-            temaEstilo.href = "./css/padrao-styles.css"; // Caminho do tema padrão
-            seletor.value = "./css/padrao-styles.css"; // Caminho do tema padrão
+        let temaSelecionado = localStorage.getItem('temaSelecionado');
+
+        // Se não houver um tema armazenado no localStorage, defina o tema padrão
+        if (!temaSelecionado) {
+            temaSelecionado = "./assets/css/padrao-styles.css"; // Caminho do tema padrão
+            localStorage.setItem('temaSelecionado', temaSelecionado); // Armazena o tema padrão no localStorage
         }
+
+        // Aplica o tema selecionado
+        temaEstilo.href = temaSelecionado;
+        seletor.value = temaSelecionado;
     }
 
     // Chama a função para garantir que o tema seja carregado na página
