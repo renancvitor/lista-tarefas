@@ -11,8 +11,8 @@ function definirTema() {
         seletor.value = temaSelecionado;
     } else {
         // Caso contrário, defina o tema padrão
-        temaEstilo.href = "./css/padrao-style.css"; // Caminho do tema padrão
-        seletor.value = "./css/padrao-style.css"; // Caminho do tema padrão
+        temaEstilo.href = "./css/padrao-styles.css"; // Caminho do tema padrão
+        seletor.value = "./css/padrao-styles.css"; // Caminho do tema padrão
     }
 }
 
