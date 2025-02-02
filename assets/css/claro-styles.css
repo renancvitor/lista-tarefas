@@ -20,6 +20,7 @@
     --scroll-track-bg: #CEAB93;
     --scroll-thunb-bg: #AD8B73;
     --scroll-border: #FFFBE9;
+    --heart: crimson;
 } 
 
 body {
@@ -28,6 +29,7 @@ body {
     color: var(--texto);
     margin: 0;
     padding: 0;
+    max-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,6 +165,24 @@ h1 {
 
 .apagar:active {
     transform: scale(0.9);
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--container-bg);
+    color: var(--texto);
+    text-align: center;
+    padding: 3px;
+    font-size: 16px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.heart {
+    color: var(--heart);
 }
 
 @media (max-width: 480px) {

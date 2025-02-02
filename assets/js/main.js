@@ -2,29 +2,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const seletor = document.getElementById('seletor-tema');
     const temaEstilo = document.getElementById('tema-estilo');
 
-    // Função para definir o tema inicial com base no localStorage ou tema padrão
     function definirTema() {
         let temaSelecionado = localStorage.getItem('temaSelecionado');
 
-        // Se não houver um tema armazenado no localStorage, defina o tema padrão
         if (!temaSelecionado) {
-            temaSelecionado = "./assets/css/padrao-styles.css"; // Caminho do tema padrão
-            localStorage.setItem('temaSelecionado', temaSelecionado); // Armazena o tema padrão no localStorage
+            temaSelecionado = "./assets/css/padrao-styles.css";
+            localStorage.setItem('temaSelecionado', temaSelecionado);
         }
 
-        // Aplica o tema selecionado
         temaEstilo.href = temaSelecionado;
         seletor.value = temaSelecionado;
     }
 
-    // Chama a função para garantir que o tema seja carregado na página
     definirTema();
 
-    // Atualiza o tema quando o usuário muda a seleção
     seletor.addEventListener('change', function () {
         const novoTema = this.value;
         temaEstilo.href = novoTema;
-        localStorage.setItem('temaSelecionado', novoTema); // Armazena o novo tema no localStorage
+        localStorage.setItem('temaSelecionado', novoTema);
     });
 });
 
