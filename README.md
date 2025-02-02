@@ -1,8 +1,12 @@
-# 📝 Lista de Tarefas de Renan Vitor 📝
+<h1 align="center">📝 Lista de Tarefas de Renan Vitor 📝 <br> <img src="https://img.shields.io/badge/Status-Concluído-green"></h1>
 
 ---
 
-## 🚀 Acesse a lista de tarefas online
+<h4 align="center">✅ Projeto concluído! ✅</h4>
+
+---
+
+<h2 align="center">🚀 Acesse a lista de tarefas online</h2>
 
 Você pode acessar esta lista de tarefas personalizada e interativa clicando no link abaixo:
 
@@ -10,7 +14,7 @@ Você pode acessar esta lista de tarefas personalizada e interativa clicando no 
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+<h2 align="center">🛠️ Tecnologias Utilizadas</h2>
 
 Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
@@ -20,7 +24,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 ---
 
-## 🧮 Funcionalidades
+<h2 align="center">🧮 Funcionalidades</h2>
 
 Na lista de tarefas você pode:
 
@@ -29,6 +33,6 @@ Na lista de tarefas você pode:
 
 ---
 
-## 📄 Licença
+<h2 align="center">📄 Licença</h2>
 
 Este projeto está licenciado sob a [Licença MIT](LICENSE), permitindo sua utilização, modificação e distribuição de forma livre, conforme os termos descritos.
