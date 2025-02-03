@@ -20,6 +20,8 @@
     --scroll-thunb-bg: #393E46;
     --scroll-border: #EEEEEE;
     --heart: crimson;
+    --animation-bg: #393E46;
+    --footer-hover: #C5DFF8;
 } 
 
 body {
@@ -180,8 +182,34 @@ h1 {
     overflow-x: hidden;
 }
 
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); } /* Reduzi um pouco para suavizar */
+    100% { transform: scale(1); }
+}
+
+.footer a {
+    color: var(--texto);
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    animation: pulse 1.5s infinite alternate ease-in-out;
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+
+.footer a:hover {
+    font-weight: bold;
+    background-color: var(--animation-bg);
+    color: var(--footer-hover);
+    animation: none; /* Pausa o efeito 'pulse' ao passar o mouse */
+}
+
 .heart {
     color: var(--heart);
+    font-size: 20px;
+    line-height: 1;
+    vertical-align: middle;
 }
 
 @media (max-width: 480px) {
