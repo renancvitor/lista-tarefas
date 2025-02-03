@@ -184,7 +184,7 @@ h1 {
 
 @keyframes pulse {
     0% { transform: scale(1); }
-    50% { transform: scale(1.03); } /* Reduzi um pouco para suavizar */
+    50% { transform: scale(1.03); }
     100% { transform: scale(1); }
 }
 
@@ -202,7 +202,7 @@ h1 {
     font-weight: bold;
     background-color: var(--animation-bg);
     color: var(--footer-hover);
-    animation: none; /* Pausa o efeito 'pulse' ao passar o mouse */
+    animation: none;
 }
 
 .heart {
